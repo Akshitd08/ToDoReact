@@ -1,13 +1,17 @@
 import Button from './Button'
-import Tasks from './Tasks'
-import AddTask from './AddTask'
-const Header = () => {
+import { useLocation } from 'react-router-dom';
+const Header = ({ addShow, showAdd }) => {
+
+    const location = useLocation()
     return (
-            <header className="headerBody">
-                <h1 >To Do List  <Button /></h1>
-                <AddTask />
-                <Tasks />
-            </header >
+        <header>
+            <h1 className='head'>To Do List
+                {location.pathname === '/' && <Button
+                    color={showAdd ? 'red' : 'green'}
+                    text={showAdd ? 'Close' : 'Add'} onClick={addShow}
+                />}
+            </h1>
+        </header >
     )
 }
 export default Header; 
