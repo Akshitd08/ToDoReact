@@ -19,8 +19,9 @@ const App = () => {
   }, [])
 
   const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks')
+    const res = await fetch('https://akshitd08.github.io/Json-data/db.json/tasks')
     const data = await res.json()
+    console.log(data)
     return (data)
   }
 
@@ -61,14 +62,14 @@ const App = () => {
         <Header addShow={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
         <Routes>
           <Route path='/' element=
-          {
-            <>
-              {showAddTask && <AddTask onAdd={addTask} />}
-              <Tasks tasks={tasks}
-                onDelete={onDelete}
-                toggle={toggle} />
-            </>
-          } />
+            {
+              <>
+                {showAddTask && <AddTask onAdd={addTask} />}
+                <Tasks tasks={tasks}
+                  onDelete={onDelete}
+                  toggle={toggle} />
+              </>
+            } />
 
           <Route path='/about' element={<About />} />
         </Routes>
