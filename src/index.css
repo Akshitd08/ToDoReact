@@ -85,10 +85,7 @@ code {
 }
 
 
-@media only screen and (min-width: 768px) {
 
- 
-}
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .head {
     font-size: 40px;
@@ -102,7 +99,7 @@ code {
 }
 @media only screen and (max-width: 479px) {
   .head {
-    font-size: 25px;
+    font-size: 35px;
   }
   .headerBody {
     border: none;
@@ -110,10 +107,15 @@ code {
     margin: 10%;
   }
   .addButton {
-    font-size: 8px;
+    font-size: 12px;
     padding: 10px;
   }
   .taskText {
     font-size: 12px;
+  }
+  .Form-btn {
+    border-radius: 3px;
+    background-color: black;
+    border: none;
   }
 }
