@@ -4,12 +4,12 @@ const Task = ({ task, onDelete, ontoggle}) => {
         <div className={`task ${task.reminder ? 'reminder ' : ' ' }`} 
         onDoubleClick={() => ontoggle(task.id)}>
 
-            <h4>{task.text}
+            <h4 className='taskText'>{task.text}
                 <FaTimes
                     className='crossBtn' onClick={() => onDelete(task.id)}
                 />
             </h4>
-            <h5>{task.date}</h5>
+            <h5 className='taskText'>{task.date}</h5>
         </div>
     )
 }

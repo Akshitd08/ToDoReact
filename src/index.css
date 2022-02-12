@@ -86,17 +86,37 @@ code {
 
 
 @media only screen and (min-width: 768px) {
-  body {
-    font-size: 16px;
+
+  .headerBody {
+    padding: 30px;
+    margin: 5%;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  body {
-    font-size: 15px;
+  .head {
+    font-size: 40px;
   }
+  .headerBody {
+    padding: 30px;
+    margin: 5%;
+  }
+ 
+ 
 }
 @media only screen and (max-width: 479px) {
-  body {
-      font-size: 14px;
+  .head {
+    font-size: 25px;
+  }
+  .headerBody {
+    border: none;
+    padding: 2px;
+    margin: 10%;
+  }
+  .addButton {
+    font-size: 8px;
+    padding: 10px;
+  }
+  .taskText {
+    font-size: 12px;
   }
 }
