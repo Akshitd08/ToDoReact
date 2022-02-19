@@ -19,7 +19,7 @@ const App = () => {
   }, [])
 
   const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks')
+    const res = await fetch('https://akshitd08.github.io/json-file/db.json')
     const data = await res.json()
     return (data)
   }
@@ -33,14 +33,14 @@ const App = () => {
       )
   }
   const onDelete = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`,
+    await fetch(`https://akshitd08.github.io/json-file/db.json/${id}`,
       {
         method: 'DELETE',
       })
     setTask(tasks.filter((task) => (task.id !== id)))
   }
   const addTask = async (task) => {
-    const res = await fetch('http://localhost:5000/tasks',
+    const res = await fetch('https://akshitd08.github.io/json-file/db.json',
       {
         method: 'POST',
         headers: {
